@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обробка подій mouseover та mouseout</title>
+  <style>
+    #myImage {
+      width: 300px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <img id="myImage" src="image1.jpg" alt="Image">
+  <script>
+    const image = document.getElementById('myImage');
+    
+    image.addEventListener('mouseover', function() {
+      image.src = 'image2.jpg';
+    });
+
+    image.addEventListener('mouseout', function() {
+      image.src = 'image1.jpg';
+    });
+  </script>
+</body>
+</html>

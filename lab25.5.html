@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таймер</title>
+</head>
+<body>
+  <button id="startButton">Старт</button>
+  <p id="timer">0</p>
+
+  <script>
+    let time = 0;
+    let timerInterval;
+
+    document.getElementById('startButton').addEventListener('click', function() {
+      if (!timerInterval) {
+        timerInterval = setInterval(function() {
+          time++;
+          document.getElementById('timer').textContent = time;
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>

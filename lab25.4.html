@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обробка події keydown</title>
+</head>
+<body>
+  <input type="text" id="keyInput" placeholder="Натисніть будь-яку клавішу">
+  <script>
+    document.getElementById('keyInput').addEventListener('keydown', function(event) {
+      console.log('Код клавіші:', event.code);
+    });
+  </script>
+</body>
+</html>
